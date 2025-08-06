@@ -1,4 +1,4 @@
-!pip install joblib
+pip install joblib
 
 # app.py
 import streamlit as st
@@ -34,5 +34,6 @@ if st.button("Predict Price"):
     prediction = model.predict(input_df)[0]
     df=input_df.values.tolist()
     st.subheader(f"Predicted Price: €{prediction:,.2f}")
+
 
 
