@@ -4,9 +4,8 @@ import pandas as pd
 import joblib
 
 
-# Load model and scaler
+# Load model
 model = joblib.load('model.pkl')
-scaler = joblib.load('scaler.pkl')
 
 st.title("Paris Housing Price Prediction")
 
@@ -32,6 +31,7 @@ if st.button("Predict Price"):
     prediction = model.predict(input_df)[0]
     df=input_df.values.tolist()
     st.subheader(f"Predicted Price: €{prediction:,.2f}")
+
 
 
 
